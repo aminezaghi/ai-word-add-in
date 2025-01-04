@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Google Gemini</title>
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and page background */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        /* Main container */
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        /* Header Style */
+        h1 {
+            font-size: 2em;
+            color: #2C3E50;
+            margin-bottom: 20px;
+        }
+
+        /* Input Area Styling */
+        textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            resize: none;
+            outline: none;
+            transition: border 0.3s ease;
+        }
+
+            /* Textarea focus effect */
+            textarea:focus {
+                border-color: #3498db;
+            }
+
+        /* Ask Button Styling */
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+            button:hover {
+                background-color: #2980b9;
+            }
+
+        /* Response Styling */
+        #response {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            min-height: 100px;
+            color: #2C3E50;
+            font-size: 1em;
+            word-wrap: break-word;
+        }
+
+        /* Loader Animation */
+        .loading {
+            font-style: italic;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ask Google Gemini</h1>
+        <textarea id="user-input" placeholder="Ask something..." rows="4"></textarea>
+        <button onclick="askGoogleAI()">Ask</button>
+        <div id="response"></div>
+    </div>
+
+    <script src="./Home.js"></script>
+</body>
+</html>
